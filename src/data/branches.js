@@ -16,7 +16,7 @@ export const branches = [
     address:
       "Behind 7-Eleven & Engen garage, next to Dr Bheeka Dentist, Penlyn Estate, Cape Town",
     phone: "+27 82 491 8881",
-    whatsapp: "27824918881",
+    whatsapp: "27798861309",
     services: ["hair", "beauty", "nanoplastia"],
     hasMassage: false,
     hasCoffeeShop: false,
@@ -29,7 +29,7 @@ export const branches = [
     address:
       "Corner of Gladiator & Weltevrede Road (old Foodland building), Mitchell's Plain, Cape Town",
     phone: "+27 82 491 8881",
-    whatsapp: "27824918881",
+    whatsapp: "27798861309",
     services: ["hair", "beauty", "nanoplastia", "massage"],
     hasMassage: true,
     hasCoffeeShop: false,
@@ -41,7 +41,7 @@ export const branches = [
     address:
       "Rycom Centre, Murton Road, same building as Radio 786 & Debonairs, opposite the dialysis centre, Rylands, Cape Town",
     phone: "+27 82 491 8881",
-    whatsapp: "27824918881",
+    whatsapp: "27798861309",
     services: ["hair", "beauty", "nanoplastia", "massage"],
     hasMassage: true,
     hasCoffeeShop: false,
@@ -52,7 +52,7 @@ export const branches = [
     name: "Plumstead",
     address: "161 Victoria Road, next to Chilli Bar, Plumstead, Cape Town",
     phone: "+27 82 491 8881",
-    whatsapp: "27824918881",
+    whatsapp: "27798861309",
     services: ["hair", "beauty", "nanoplastia", "coffee"],
     hasMassage: false,
     hasCoffeeShop: true,
