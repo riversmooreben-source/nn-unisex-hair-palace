@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { branches } from "../data/branches";
-import { site, mapsLink } from "../data/site";
+import { site, mapsLink, telLink } from "../data/site";
 
 export default function Footer() {
   return (
@@ -67,8 +67,16 @@ export default function Footer() {
             Get In Touch
           </h4>
           <ul className="mt-4 space-y-2 text-sm text-brand-cream/80">
-            <li>{site.phoneDisplay}</li>
-            <li>{site.email}</li>
+            <li>
+              <a href={telLink(site.phone)} className="hover:text-brand-gold-light">
+                {site.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${site.email}`} className="hover:text-brand-gold-light">
+                {site.email}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
