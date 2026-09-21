@@ -20,3 +20,7 @@ export function whatsappLink(number = site.whatsapp, message = site.whatsappMess
 export function telLink(phone = site.phone) {
   return `tel:${phone.replace(/\s+/g, "")}`;
 }
+
+export function mapsLink(address) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+}

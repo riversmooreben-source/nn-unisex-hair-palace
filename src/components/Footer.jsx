@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { branches } from "../data/branches";
-import { site } from "../data/site";
+import { site, mapsLink } from "../data/site";
 
 export default function Footer() {
   return (
@@ -48,7 +48,16 @@ export default function Footer() {
           </h4>
           <ul className="mt-4 space-y-2 text-sm text-brand-cream/80">
             {branches.map((b) => (
-              <li key={b.id}>{b.name}</li>
+              <li key={b.id}>
+                <a
+                  href={mapsLink(b.address)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-gold-light"
+                >
+                  {b.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>

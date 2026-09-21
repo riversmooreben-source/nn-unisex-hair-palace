@@ -1,6 +1,6 @@
 import { branches, SERVICE_LABELS, businessHours, openPublicHolidays } from "../data/branches";
 import PhotoPlaceholder from "../components/PhotoPlaceholder";
-import { telLink, whatsappLink } from "../data/site";
+import { telLink, whatsappLink, mapsLink } from "../data/site";
 
 export default function Locations() {
   return (
@@ -65,7 +65,16 @@ function BranchCard({ branch }) {
 
       <div className="flex flex-1 flex-col p-5">
         <div className="flex flex-wrap items-start justify-between gap-2">
-          <h2 className="font-display text-xl font-bold text-brand-black">{branch.name}</h2>
+          <h2 className="font-display text-xl font-bold text-brand-black">
+            <a
+              href={mapsLink(branch.address)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-gold hover:underline"
+            >
+              {branch.name}
+            </a>
+          </h2>
           <div className="flex flex-wrap gap-1">
             {branch.hasMassage && <Badge>Massage Available</Badge>}
             {branch.hasCoffeeShop && <Badge>☕ Coffee Shop</Badge>}
