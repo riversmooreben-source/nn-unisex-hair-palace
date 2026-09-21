@@ -8,8 +8,8 @@ export const site = {
   whatsapp: "27824918881",
   whatsappMessage: "Hi N&N! I'd like to book an appointment.",
   email: "bookings@nnhairpalace.co.za",
-  // TODO: replace with the real Facebook/Instagram page URLs
-  facebook: "https://facebook.com/nnhairpalace",
+  facebook: "https://www.facebook.com/profile.php?id=100062976834575",
+  // TODO: replace with the real Instagram page URL
   instagram: "https://instagram.com/nnhairpalace",
 };
 
