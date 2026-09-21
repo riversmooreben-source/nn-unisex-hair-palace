@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-brand-black text-brand-cream">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo variant="dark" />
+          <Logo variant="emblem" className="h-20 w-20" />
           <p className="mt-4 text-sm text-brand-cream/70">{site.tagline}</p>
           <div className="mt-4 flex gap-3">
             <a

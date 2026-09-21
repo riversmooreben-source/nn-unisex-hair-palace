@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-brand-black shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <NavLink to="/" onClick={() => setOpen(false)}>
-          <Logo variant="dark" />
+          <Logo variant="wordmark" className="h-8 sm:h-9" />
         </NavLink>
 
         <nav className="hidden items-center gap-6 lg:flex">

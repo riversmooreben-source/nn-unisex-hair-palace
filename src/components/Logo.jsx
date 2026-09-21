@@ -1,25 +1,24 @@
-import logo from "../assets/logo.jpg";
+import wordmark from "../assets/logo-wordmark.png";
+import emblem from "../assets/logo-emblem.jpg";
 
-export default function Logo({ variant = "dark", className = "" }) {
-  const isDark = variant === "dark";
-  return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
+// "wordmark" (nav bar, favicon source): simpler lockup, reads well at small sizes.
+// "emblem" (hero, footer): full circular badge — has room to hold its detail there.
+export default function Logo({ variant = "wordmark", className = "" }) {
+  if (variant === "emblem") {
+    return (
       <img
-        src={logo}
-        alt="N&N Unisex Hair Palace logo"
-        className="h-11 w-11 rounded-full object-cover"
+        src={emblem}
+        alt="N&N Hair & Beauty"
+        className={`rounded-full object-cover ${className || "h-16 w-16"}`}
       />
-      <span
-        className={`font-display text-lg font-bold leading-tight tracking-wide ${
-          isDark ? "text-brand-cream" : "text-brand-black"
-        }`}
-      >
-        N&amp;N Unisex
-        <br />
-        <span className="text-xs font-sans font-medium tracking-widest uppercase opacity-80">
-          Hair Palace
-        </span>
-      </span>
-    </div>
+    );
+  }
+
+  return (
+    <img
+      src={wordmark}
+      alt="N&N Hair & Beauty"
+      className={`w-auto object-contain ${className || "h-9"}`}
+    />
   );
 }

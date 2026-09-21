@@ -16,7 +16,7 @@ export default function Services() {
           Services &amp; Pricing
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-brand-black/70">
-          Sample pricing structure shown below — final confirmed prices coming soon.
+          Pricing below is taken from our in-branch price lists.
         </p>
       </header>
 
@@ -43,8 +43,15 @@ export default function Services() {
               >
                 <td className="px-4 py-3 font-medium text-brand-black">{svc.name}</td>
                 {LENGTHS.map((len) => (
-                  <td key={len} className="px-4 py-3 text-right text-brand-black/80">
-                    R{svc.prices[len]}
+                  <td
+                    key={len}
+                    className={`px-4 py-3 text-right ${
+                      svc.prices[len] === "Ask in branch"
+                        ? "text-brand-black/40 italic"
+                        : "text-brand-black/80"
+                    }`}
+                  >
+                    {svc.prices[len]}
                   </td>
                 ))}
               </tr>
@@ -76,7 +83,7 @@ export default function Services() {
               </td>
               {LENGTHS.map((len) => (
                 <td key={len} className="px-4 py-3 text-right text-brand-black/80">
-                  R{nanoplastiaService.prices[len]}
+                  {nanoplastiaService.prices[len]}
                 </td>
               ))}
             </tr>
@@ -132,8 +139,8 @@ function SectionTitle({ children }) {
 function PriceNote() {
   return (
     <div className="mb-8 rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-4 py-3 text-center text-sm text-brand-black/80">
-      ⚠️ Prices shown are a sample structure and subject to confirmation. Some figures are not
-      yet finalized — contact your nearest branch for exact quotes.
+      ⚠️ Prices are accurate as of our last in-branch price list but should be confirmed
+      before publishing — some items marked "Ask in branch" are still to be finalized.
     </div>
   );
 }

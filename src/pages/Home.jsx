@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CallButton, WhatsAppButton } from "../components/CTAButtons";
 import { SpecialsCard } from "../components/SpecialsBadge";
 import PhotoPlaceholder from "../components/PhotoPlaceholder";
+import Logo from "../components/Logo";
 import { specials } from "../data/specials";
 import { facebookStat, reviews } from "../data/reviews";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <section className="bg-brand-black text-brand-cream">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 lg:grid-cols-2 lg:py-20">
           <div>
+            <Logo variant="emblem" className="mb-6 h-24 w-24 sm:h-28 sm:w-28" />
             <p className="mb-3 inline-block rounded-full bg-brand-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-gold">
               4 Branches Across Cape Town
             </p>

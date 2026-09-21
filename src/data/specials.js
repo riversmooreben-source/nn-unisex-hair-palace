@@ -9,7 +9,7 @@ export const specials = [
   {
     title: "Nanoplastia Special",
     detail: "Book this month across all 4 branches.",
-    price: "From R900",
+    price: "From R250",
     badge: "NEW",
   },
   {

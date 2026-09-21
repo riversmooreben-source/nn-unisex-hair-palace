@@ -1,47 +1,50 @@
-// Sample/placeholder pricing structure — swap in confirmed figures.
+// Real pricing, transcribed from the client's own in-salon flyers (2026-09).
 // Prices are in ZAR (R). `lengths` prices apply where noted.
+// A few cells are unconfirmed by the client — shown as "Ask in branch" rather than a guessed number.
 
 export const LENGTHS = ["Short", "Mid", "Long", "Extra Long"];
+
+const ASK = "Ask in branch";
 
 export const hairServices = [
   {
     name: "Wash, Blow & Flat Iron",
-    prices: { Short: 150, Mid: 190, Long: 230, "Extra Long": 280 },
+    prices: { Short: "R50", Mid: "R70", Long: "R90", "Extra Long": "R120" },
   },
   {
-    name: "Highlights (Full Head)",
-    prices: { Short: 450, Mid: 550, Long: 650, "Extra Long": 780 },
+    name: "Highlights",
+    prices: { Short: "R150", Mid: "R200", Long: "R250", "Extra Long": "R300" },
   },
   {
-    name: "Colour (Full Head)",
-    prices: { Short: 350, Mid: 430, Long: 520, "Extra Long": 620 },
+    name: "Colours",
+    prices: { Short: "R150", Mid: "R200", Long: "R250", "Extra Long": "R300" },
   },
   {
-    name: "Cut",
-    prices: { Short: 120, Mid: 150, Long: 180, "Extra Long": 210 },
+    name: "Cuts",
+    prices: { Short: "R70", Mid: "R70", Long: "R70", "Extra Long": "R70" },
   },
   {
     name: "Trim",
-    prices: { Short: 80, Mid: 100, Long: 120, "Extra Long": 140 },
+    prices: { Short: "R30", Mid: "R30", Long: "R30", "Extra Long": "R30" },
   },
   {
     name: "Brazilian Gold / BHS Treatment",
-    prices: { Short: 400, Mid: 500, Long: 600, "Extra Long": 720 },
+    prices: { Short: "R100", Mid: "R150", Long: "R200", "Extra Long": "R250" },
   },
   {
     name: "Koffee Botox Treatment",
-    prices: { Short: 450, Mid: 550, Long: 650, "Extra Long": 780 },
+    prices: { Short: "R150", Mid: "R200", Long: "R250", "Extra Long": ASK },
   },
   {
     name: "Ztox Treatment",
-    prices: { Short: 400, Mid: 500, Long: 600, "Extra Long": 720 },
+    prices: { Short: "R100", Mid: ASK, Long: ASK, "Extra Long": ASK },
   },
 ];
 
 export const nanoplastiaService = {
   name: "Brasil Cacau Nanoplastia",
   note: "Available at all 4 branches",
-  prices: { Short: 900, Mid: 1100, Long: 1350, "Extra Long": 1600 },
+  prices: { Short: "R250", Mid: "R350", Long: "R450", "Extra Long": "R550" },
 };
 
 // Sourced from an in-salon N&N Beauty price list photo — real figures, but
@@ -86,10 +89,11 @@ export const beautyNote =
   "Matric ball, wedding & package deals available — ask in branch for a custom quote.";
 
 export const massageServices = [
-  { name: "Swedish Massage (60 min)", price: "R450" },
-  { name: "Deep Tissue Massage (60 min)", price: "R520" },
-  { name: "Back & Neck Massage (30 min)", price: "R280" },
-  { name: "Foot Massage (30 min)", price: "R220" },
+  { name: "Promo: 1hr Full Body", price: "R100" },
+  { name: "Swedish Full Body", price: "R200" },
+  { name: "Deep Tissue Full Body", price: "R250" },
+  { name: "Back & Neck (30 min)", price: "R120" },
+  { name: "Foot (30 min)", price: "R60" },
 ];
 
 export const massageBranches = ["Mitchell's Plain (Rocklands)", "Rylands (2nd Branch)"];

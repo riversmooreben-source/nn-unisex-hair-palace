@@ -1,5 +1,4 @@
-import { branches, SERVICE_LABELS } from "../data/branches";
-import { CallButton, WhatsAppButton } from "../components/CTAButtons";
+import { branches, SERVICE_LABELS, businessHours, openPublicHolidays } from "../data/branches";
 import PhotoPlaceholder from "../components/PhotoPlaceholder";
 import { telLink, whatsappLink } from "../data/site";
 
@@ -16,10 +15,44 @@ export default function Locations() {
         </p>
       </header>
 
+      <BusinessHoursCard />
+
       <div className="grid gap-6 sm:grid-cols-2">
         {branches.map((branch) => (
           <BranchCard key={branch.id} branch={branch} />
         ))}
+      </div>
+    </div>
+  );
+}
+
+function BusinessHoursCard() {
+  return (
+    <div className="mb-10 overflow-hidden rounded-2xl border border-brand-gold/20 bg-brand-black text-brand-cream shadow-sm">
+      <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div>
+          <h2 className="font-display text-lg font-bold text-brand-gold">
+            Business Hours
+          </h2>
+          <p className="mt-1 text-sm text-brand-cream/60">Same at all 4 branches</p>
+          <div className="mt-4 space-y-1.5 text-sm">
+            {businessHours.map((h) => (
+              <div key={h.days} className="flex justify-between gap-8">
+                <span className="text-brand-cream/80">{h.days}</span>
+                <span className="font-medium">{h.time}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {openPublicHolidays && (
+          <div className="flex items-center gap-3 self-start rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-5 py-4 sm:self-center">
+            <span className="text-2xl">🎉</span>
+            <span className="font-display text-sm font-bold text-brand-gold">
+              Open on Public Holidays!
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -40,15 +73,6 @@ function BranchCard({ branch }) {
         </div>
 
         <p className="mt-2 text-sm text-brand-black/70">{branch.address}</p>
-
-        <div className="mt-4 space-y-1 text-sm text-brand-black/80">
-          {branch.hours.map((h) => (
-            <div key={h.days} className="flex justify-between">
-              <span>{h.days}</span>
-              <span className="font-medium">{h.time}</span>
-            </div>
-          ))}
-        </div>
 
         <div className="mt-4 flex flex-wrap gap-1.5">
           {branch.services.map((s) => (
