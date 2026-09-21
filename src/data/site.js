@@ -1,12 +1,10 @@
-// Real numbers from in-salon signage: 082 491 8881 (call) and 079 886 1309 (WhatsApp)
-// are two different lines, shared across all 4 branches.
+// 082 491 8881 is the real call & WhatsApp number, shared across all 4 branches.
 export const site = {
   name: "N&N Unisex Hair Palace",
   tagline: "Specials any day, every day",
   phone: "+27 82 491 8881",
   phoneDisplay: "082 491 8881",
-  whatsapp: "27798861309",
-  whatsappDisplay: "079 886 1309",
+  whatsapp: "27824918881",
   whatsappMessage: "Hi N&N! I'd like to book an appointment.",
   email: "bookings@nnhairpalace.co.za",
   facebook: "https://www.facebook.com/profile.php?id=100062976834575",
